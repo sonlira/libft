@@ -16,14 +16,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*new_s;
 	size_t	i;
+	size_t	total_size;
 
 	i = 0;
-	new_s = (char *) malloc(sizeof(char) * (len + 1));
+	total_size = len - start;
+	new_s = (char *) ft_calloc(total_size,sizeof(char));
 	if (!new_s)
 		return (NULL);
-	while (start <= len && !s)
+	while (start < len && !s)
 	{
-		new_s[i++] = s[start++];
+		new_s[i] = s[start];
+		start++;
+		i++;
 	}
 	return (new_s);
 }

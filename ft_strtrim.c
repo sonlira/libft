@@ -11,16 +11,15 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	
 }
 
 
-int	main()
-{
-	char *str = ft_strtrim("abcde","ace");
- 	printf("%s", str);
-	return (0);
-}
+// int	main()
+// {
+// 	char *str = ft_strtrim("abcde","ace");
+//  	printf("%s", str);
+// 	return (0);
+// }

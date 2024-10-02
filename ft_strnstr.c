@@ -18,12 +18,12 @@ char	*ft_strnstr(const char *big, const char *small, size_t size)
 	size_t	j;
 
 	i = 0;
-	if (!*small || !*big)
+	if (!*small)
 		return ((char *)big);
 	while (big[i] != '\0' && i < size)
 	{
 		j = 0;
-		while (big[i + j] == small[j])
+		while (big[i + j] == small[j] && i + j < size)
 		{
 			j++;
 			if (small[j] == '\0')

@@ -16,13 +16,11 @@ char	*ft_strdup(const char *s)
 {
 	char	*dest;
 	size_t	long_s;
-
 	long_s = ft_strlen(s);
 	dest = (char *) malloc(long_s + 1);
 	if (!dest)
-	{
-		return (NULL);
-	}
+		return(NULL);
 	ft_memcpy(dest, s, long_s);
+	dest[long_s] = '\0';
 	return (dest);
 }
