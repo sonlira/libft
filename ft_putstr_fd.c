@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaldelo <abaldelo@student.42.fr>          #+#  +:+       +#+        */
+/*   By: abaldelo <abaldelo@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-09-22 13:51:33 by abaldelo          #+#    #+#             */
-/*   Updated: 2024-09-22 13:51:33 by abaldelo         ###   ########.fr       */
+/*   Created: 2024-10-03 18:12:44 by abaldelo          #+#    #+#             */
+/*   Updated: 2024-10-03 18:12:44 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char	*dest;
-	size_t	long_s;
-
-	long_s = ft_strlen(s);
-	dest = (char *) malloc(long_s + 1);
-	if (!dest)
-		return (NULL);
-	ft_memcpy(dest, s, long_s);
-	dest[long_s] = '\0';
-	return (dest);
+	while (*s)
+	{
+		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }

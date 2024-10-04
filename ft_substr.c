@@ -14,20 +14,28 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*new_s;
-	size_t	i;
-	size_t	total_size;
+	char	*str;
+	size_t	slen;
 
-	i = 0;
-	total_size = len - start;
-	new_s = (char *) ft_calloc(total_size,sizeof(char));
-	if (!new_s)
+	if (!s)
 		return (NULL);
-	while (start < len && !s)
-	{
-		new_s[i] = s[start];
-		start++;
-		i++;
-	}
-	return (new_s);
+	slen = ft_strlen(s);
+	if (slen <= start)
+		return (ft_strdup(""));
+	if ((slen - start) < len)
+		len = slen - start;
+	str = (char *) malloc((len + 1) * 1);
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, (s + start), (len + 1));
+	return (str);
 }
+//#include <stdio.h>
+/*int	main()
+{
+	char *s = "i just want this part #############";
+	int	inicio = 5;
+	char	*newstr = ft_substr(s,inicio,10);
+	printf("%s",newstr);
+	return (0);
+}*/

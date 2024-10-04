@@ -11,12 +11,11 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	
+	return (0);
 }
-
-
 // int	main()
 // {
 // 	char *str = ft_strtrim("abcde","ace");

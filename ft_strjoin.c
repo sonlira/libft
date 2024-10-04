@@ -12,28 +12,32 @@
 
 #include "libft.h"
 
-static size_t	copy_str(size_t index, size_t total_size, char *dest, char const *src)
+static size_t	copy_str(size_t i, size_t n, char *dst, char const *src)
 {
-	while(index < total_size && *src != '\0')
+	while (i < n && *src)
 	{
-		dest[index] = *src;
+		dst[i] = *src;
 		src++;
-		index++;
+		i++;
 	}
-	return (index);
+	return (i);
 }
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t total_size;
-	size_t i;
-	char	*n_str;
+	char	*str;
+	size_t	total_size;
+	size_t	i;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	total_size = (ft_strlen(s1) + ft_strlen(s2)) + 1;
-	n_str = (char *) malloc(sizeof(char) * total_size);
-	if (!n_str)
+	str = (char *) malloc(total_size);
+	if (!str)
 		return (NULL);
-	i = copy_str(i,total_size,n_str,s1);
-	i = copy_str(i,total_size,n_str,s2);
-	return (n_str);
+	i = copy_str(i, total_size, str, s1);
+	i = copy_str(i, total_size, str, s2);
+	str[i] = '\0';
+	return (str);
 }
