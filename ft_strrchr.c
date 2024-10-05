@@ -17,11 +17,11 @@ char	*ft_strrchr(const char *s, int c)
 
 	longer = ft_strlen(s);
 	if ((char)c == '\0')
-		return (s + longer);
+		return ((char *)s + longer);
 	while (longer--)
 	{
 		if (s[longer] == (char)c)
-			return (s + longer);
+			return ((char *)s + longer);
 	}
 	return (NULL);
 }

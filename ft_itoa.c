@@ -13,39 +13,72 @@
 #include "libft.h"
 #include <stdio.h>
 
-/*int	num_digits(int n)
+static int	num_digits(int n)
 {
-	return (0);
-}*/
+	int	len;
+
+	len = 1;
+	if (n == -2147483648)
+	{
+		len += 2;
+		n = 147483648;
+	}
+	if (n < 0)
+	{
+		n = -n;
+		len++;
+	}
+	while (n >= 10)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
+}
+
+static char	*put_nbr(char *s, int n, int i)
+{
+	if (n == -2147483648)
+	{
+		s[0] = '-';
+		s[1] = '2';
+		n = 147483648;
+	}
+	if (n < 0)
+	{
+		n = -n;
+		s[0] = '-';
+	}
+	while (n >= 10)
+	{
+		s[i] = n % 10 + '0';
+		n /= 10;
+		i--;
+	}
+	s[i] = n + '0';
+	return (s);
+}
 
 char	*ft_itoa(int n)
 {
-	int	num;
-	int	len;
+	int		len;
+	char	*src;
 
-	num = n;
-	len = 1;
-	printf("n %d", num);
-	if (num < 0)
-	{
-		num = -num;
-		len++;
-	}
-	while (num >= 10)
-	{
-		num = num / 10;
-		printf("\n%d num %d", len, num);
-		len++;
-	}
-	printf("\n len %d", len);
-	return (0);
+	len = num_digits(n);
+	src = (char *) malloc(len + 1);
+	if (!src)
+		return (NULL);
+	src = put_nbr(src, n, len - 1);
+	src[len] = '\0';
+	return (src);
 }
-
-int	main()
+/*
+int	main(void)
 {
-	size_t n;
-	n = -3;
-	printf("%lu \n", n);
-	ft_itoa(-1234);
+	char	*s;
+
+	s = ft_itoa(-1999);
+	printf("%s", s);
 	return (0);
 }
+*/
