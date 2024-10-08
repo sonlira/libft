@@ -6,21 +6,20 @@
 /*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 20:53:59 by abaldelo          #+#    #+#             */
-/*   Updated: 2024/10/08 20:04:26 by abaldelo         ###   ########.fr       */
+/*   Updated: 2024/10/08 22:46:21 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static	size_t	lenght_word(char const *s, char c)
 {
-	size_t i;
+	size_t	size;
 
-	i = 0;
-	while (s[i] && s[i] != c)
-		i++;
-	return (i);
+	size = 0;
+	while (s[size] && s[size] != c)
+		size++;
+	return (size);
 }
 
 static	size_t	count_words(char const *s, char c)
@@ -41,20 +40,59 @@ static	size_t	count_words(char const *s, char c)
 	return (count);
 }
 
+static	void	free_mem(char **words)
+{
+	size_t	i;
+
+	i = 0;
+	while (words[i])
+		free(words[i++]);
+	free(words);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**words;
 	size_t	ntwords;
+	size_t	i;
 
-	ntwords = count_words(s, c);
-	printf("%ld", ntwords);
+	i = 0;
 	if (!s)
 		return (NULL);
-	return (0);
+	ntwords = count_words(s, c);
+	words = (char **)malloc((ntwords + 1) * sizeof(char *));
+	if (!words)
+		return (NULL);
+	while (*s)
+	{
+		if (*s != c)
+		{
+			words[i] = ft_substr(s, 0, lenght_word(s, c));
+			if (!words[i++])
+				return (free_mem(words), NULL);
+			s += lenght_word(s, c);
+		}
+		else
+			s++;
+	}
+	words[i] = NULL;
+	return (words);
 }
+/*
+#include <stdio.h>
 
 int	main(void)
 {
-	ft_split("hola Paco", ' ');
+	char	**m;
+	char	*s;
+	int		i;
+
+	i = 0;
+	s = "Buenos_Días Buenas_Tardes y Buenas_noches :)!";
+	m = ft_split(s, ' ');
+	while (m[i])
+	{
+		printf("%s\n", m[i++]);
+	}
 	return (0);
-}
+}*/
