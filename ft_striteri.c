@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaldelo <abaldelo@student.42madrid.com>   #+#  +:+       +#+        */
+/*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-07 13:43:22 by abaldelo          #+#    #+#             */
-/*   Updated: 2024-10-07 13:43:22 by abaldelo         ###   ########.fr       */
+/*   Created: 2024/10/07 13:43:22 by abaldelo          #+#    #+#             */
+/*   Updated: 2024/10/08 19:57:15 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 /*
 void	suma(unsigned int i,  char *c)
 {
@@ -23,14 +22,14 @@ void	suma(unsigned int i,  char *c)
 }
 */
 
-void	ft_striteri(char *s, void (*f)(unsigned int,char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
-	
+
 	i = 0;
-	while (*(s+i))
+	while (*(s + i))
 	{
-		f(i,s+i);
+		f(i, s + i);
 		i++;
 	}
 }

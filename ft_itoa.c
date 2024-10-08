@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaldelo <abaldelo@student.42madrid.com>   #+#  +:+       +#+        */
+/*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-04 17:47:45 by abaldelo          #+#    #+#             */
-/*   Updated: 2024-10-04 17:47:45 by abaldelo         ###   ########.fr       */
+/*   Created: 2024/10/04 17:47:45 by abaldelo          #+#    #+#             */
+/*   Updated: 2024/10/08 19:58:37 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

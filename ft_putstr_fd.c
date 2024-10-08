@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaldelo <abaldelo@student.42madrid.com>   #+#  +:+       +#+        */
+/*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-03 18:12:44 by abaldelo          #+#    #+#             */
-/*   Updated: 2024-10-03 18:12:44 by abaldelo         ###   ########.fr       */
+/*   Created: 2024/10/03 18:12:44 by abaldelo          #+#    #+#             */
+/*   Updated: 2024/10/08 19:58:26 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

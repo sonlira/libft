@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaldelo <abaldelo@student.42.fr>          #+#  +:+       +#+        */
+/*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-09-27 16:11:57 by abaldelo          #+#    #+#             */
-/*   Updated: 2024-09-27 16:11:57 by abaldelo         ###   ########.fr       */
+/*   Created: 2024/09/27 16:11:57 by abaldelo          #+#    #+#             */
+/*   Updated: 2024/10/08 19:57:16 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

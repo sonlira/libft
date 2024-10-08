@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaldelo <abaldelo@student.42.fr>          #+#  +:+       +#+        */
+/*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-09-28 00:31:31 by abaldelo          #+#    #+#             */
-/*   Updated: 2024-09-28 00:31:31 by abaldelo         ###   ########.fr       */
+/*   Created: 2024/09/28 00:31:31 by abaldelo          #+#    #+#             */
+/*   Updated: 2024/10/08 19:58:09 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

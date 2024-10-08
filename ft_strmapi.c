@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaldelo <abaldelo@student.42madrid.com>   #+#  +:+       +#+        */
+/*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-07 10:23:10 by abaldelo          #+#    #+#             */
-/*   Updated: 2024-10-07 10:23:10 by abaldelo         ###   ########.fr       */
+/*   Created: 2024/10/07 10:23:10 by abaldelo          #+#    #+#             */
+/*   Updated: 2024/10/08 19:57:13 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <stdio.h>
-
+/*
 char	suma(unsigned int i,  char c)
 {
 	(void) i;
@@ -27,14 +26,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;
 	char	*src;
-	
+
 	i = 0;
 	src = (char *) malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!src)
 		return (NULL);
 	while (s[i])
 	{
-		src[i] = f(i,s[i]);
+		src[i] = f(i, s[i]);
 		i++;
 	}
 	src[i] = '\0';
