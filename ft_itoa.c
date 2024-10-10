@@ -6,7 +6,7 @@
 /*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 17:47:45 by abaldelo          #+#    #+#             */
-/*   Updated: 2024/10/10 17:37:47 by abaldelo         ###   ########.fr       */
+/*   Updated: 2024/10/10 18:59:57 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,14 +71,3 @@ char	*ft_itoa(int n)
 	src[len] = '\0';
 	return (src);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	*s;
-
-	s = ft_itoa(-1999);
-	printf("%s", s);
-	return (0);
-}
-*/

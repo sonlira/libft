@@ -6,7 +6,7 @@
 /*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 15:36:52 by abaldelo          #+#    #+#             */
-/*   Updated: 2024/10/10 15:30:16 by abaldelo         ###   ########.fr       */
+/*   Updated: 2024/10/10 18:59:54 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(str, (s + start), (len + 1));
 	return (str);
 }
-//#include <stdio.h>
-/*int	main()
-{
-	char *s = "i just want this part #############";
-	int	inicio = 5;
-	char	*newstr = ft_substr(s,inicio,10);
-	printf("%s",newstr);
-	return (0);
-}*/

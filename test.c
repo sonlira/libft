@@ -2,6 +2,26 @@
 #include <stdio.h>
 #include "libft.h"
 
+/*#################### Additional functions ###########################*/
+static char	af_toupper(unsigned int i,  char c)
+{
+	(void) i;
+	if (c >= 'a' && c <= 'z')
+	{
+		c -= ('a' - 'A');
+	}
+	return (c);
+}
+static void	afv_toupper(unsigned int i,  char *c)
+{
+	(void) i;
+	if (*c >= 'a' && *c <= 'z')
+	{
+		*c -= ('a' - 'A');
+	}
+}
+/*#################### TEST ###########################*/
+
 void	test_isalpha(void)
 {
 	int	c;
@@ -185,7 +205,7 @@ void	test_atoi(void)
 {
 	char	*s;
 
-	s = "+2024";
+	s = "\t\n\v\f\r     +2024";
 	printf("+======= ft_atoi =======+\n");
 	printf("\tsrc: %s int: %d\n\n", s, ft_atoi(s));
 }
@@ -197,7 +217,7 @@ void	test_calloc(void)
 
 	i = 0;
 	n = 5;
-	arr = (int *)ft_calloc(n,sizeof(int));
+	arr = (int *)ft_calloc(n, sizeof(int));
 	printf("+======= ft_calloc =======+\n");
 	printf("\tresult: ");
 	while (i < n)
@@ -212,7 +232,8 @@ void	test_strdup(void)
 	s = "Hello World!";
 	dup = ft_strdup(s);
 	printf("+======= ft_strdup =======+\n");
-	printf("\tduplicate: %s\n\n", dup);
+	printf("\tduplicate: %s\n", dup);
+	printf("\tPointer s: %p, Pointer dup: %p\n\n", s, dup);
 }
 void	test_substr(void)
 {
@@ -220,10 +241,81 @@ void	test_substr(void)
 	char	*dup;
 
 	s = "Hello World!";
-	dup = ft_strdup(s);
+	dup = ft_substr(s, 6, 6);
 	printf("+======= ft_substr =======+\n");
-	printf("\tduplicate: %s\n\n", dup);
-	printf("Pointer s: %p, Pointer dup: %p", s, dup);
+	printf("\tsubstr: %s\n", dup);
+	printf("\tPointer s: %p, Pointer dup: %p\n\n", s, dup);
+}
+void	test_strjoin(void)
+{
+	char	*s1;
+	char	*s2;
+	char	*dup;
+
+	s1 = "Hello ";
+	s2 = "World!";
+	dup = ft_strjoin(s1, s2);
+	printf("+======= ft_strjoin =======+\n");
+	printf("\tstrjoin: %s\n", dup);
+	printf("\tPointer s1: %p, Pointer s2: %p, Pointer dup: %p\n\n", s1, s2, dup);
+}
+void	test_strtrim(void)
+{
+	char	*s;
+	char	*set;
+	char	*resul;
+
+	s = "##Hello World!######";
+	set = "#";
+	resul = ft_strtrim(s, set);
+	printf("+======= ft_strtrim =======+\n");
+	printf("\tsrc: %s strtrim: %s\n", s, resul);
+	printf("\tPointer s: %p, Pointer resul: %p\n\n", s, resul);
+}
+void	test_split(void)
+{
+	char	*s;
+	char	**words;
+	char	d;
+	int	i;
+
+	s = "Hello World!";
+	d = ' ';
+	words = ft_split(s, d);
+	i = 0;
+	printf("+======= ft_split =======+\n");
+	printf("\tsrc: %s delimiter: <%c>\n", s, d);
+	while (words[i])
+	{
+		printf("\tsrc %d: %s pointer: %p\n", i, words[i], words[i]);
+		i++;
+	}
+	printf("\n");
+}
+void	test_itoa(void)
+{
+	int	num;
+
+	num = -2024;
+	printf("+======= ft_itoa =======+\n");
+	printf("\tnum: %d src: %s\n\n", num, ft_itoa(num));
+}
+void	test_strmapi(void)
+{
+	char	*s1;
+
+	s1 = "Hello World!";
+	printf("+======= ft_strmapi =======+\n");
+	printf("\ts1: %s strmapi: %s\n", s1, ft_strmapi(s1,af_toupper));
+	printf("\tPointer s1: %p, Pointer resul: %p\n\n", s1, ft_strmapi(s1,af_toupper));
+}
+void	test_striteri(void)
+{
+	printf("+======= ft_striteri =======+\n");
+	char s1[30] = "Hello World!";
+	printf("\tbefore: %s ", s1);
+	ft_striteri(s1,afv_toupper);
+	printf("after: %s \n\n", s1);
 }
 int	main(void)
 {
@@ -251,15 +343,15 @@ int	main(void)
 	test_calloc();
 	test_strdup();
 	test_substr();
+	test_strjoin();
+	test_strtrim();
+	test_split();
+	test_itoa();
+	test_strmapi();
+	test_striteri();
 	return (0);
 }
 
 /*
-	cc -Wall -Wextra -Werror test.c ft_isalpha.c
-	ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c
-	ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c
-	ft_memmove.c ft_strlcpy.c ft_strlcat.c
-	ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c
-	ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c
-	ft_atoi.c ft_calloc.c ft_strdup.c
+	cc -Wall -Wextra -Werror test.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c
 */

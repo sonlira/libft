@@ -6,20 +6,11 @@
 /*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:43:22 by abaldelo          #+#    #+#             */
-/*   Updated: 2024/10/10 17:31:19 by abaldelo         ###   ########.fr       */
+/*   Updated: 2024/10/10 19:00:16 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*void	suma(unsigned int i,  char *c)
-{
-	(void) i;
-	if (*c >= 'a' && *c <= 'z')
-	{
-		*c -= ('a' - 'A');
-	}
-}*/
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -32,11 +23,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-/*#include <stdio.h>
-int	main(void)
-{
-	char	src[] = "hola";
-	ft_striteri(src,suma);
-	printf("\n%s",src);
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 00:31:31 by abaldelo          #+#    #+#             */
-/*   Updated: 2024/10/08 19:58:09 by abaldelo         ###   ########.fr       */
+/*   Updated: 2024/10/10 19:01:38 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	return (str);
 }
-/*
-int	main()
-{
-	char *str = ft_strtrim("##hola######","#");
- 	printf("%s", str);
-	return (0);
-}
-*/

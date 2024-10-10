@@ -6,7 +6,7 @@
 /*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 20:53:59 by abaldelo          #+#    #+#             */
-/*   Updated: 2024/10/08 22:46:21 by abaldelo         ###   ########.fr       */
+/*   Updated: 2024/10/10 18:58:53 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,21 +78,3 @@ char	**ft_split(char const *s, char c)
 	words[i] = NULL;
 	return (words);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	**m;
-	char	*s;
-	int		i;
-
-	i = 0;
-	s = "Buenos_Días Buenas_Tardes y Buenas_noches :)!";
-	m = ft_split(s, ' ');
-	while (m[i])
-	{
-		printf("%s\n", m[i++]);
-	}
-	return (0);
-}*/
