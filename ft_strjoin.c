@@ -6,7 +6,7 @@
 /*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 16:11:57 by abaldelo          #+#    #+#             */
-/*   Updated: 2024/10/08 19:57:16 by abaldelo         ###   ########.fr       */
+/*   Updated: 2024/10/10 15:29:37 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	i = 0;
 	total_size = (ft_strlen(s1) + ft_strlen(s2)) + 1;
-	str = (char *) malloc(total_size);
+	str = (char *) malloc(total_size * sizeof(char));
 	if (!str)
 		return (NULL);
 	i = copy_str(i, total_size, str, s1);
