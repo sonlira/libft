@@ -6,7 +6,7 @@
 #    By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/28 07:55:52 by abaldelo          #+#    #+#              #
-#    Updated: 2024/10/10 12:29:16 by abaldelo         ###   ########.fr        #
+#    Updated: 2024/10/11 15:43:11 by abaldelo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	= libft.a
 RM		= rm -f
 CC		= cc
 CCFLAGS = -Wall -Werror -Wextra
-LIB		= ar rcs
+LIB		= ar r
 SRC		= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c\
 		ft_isascii.c ft_isdigit.c ft_isprint.c ft_memchr.c ft_memcmp.c\
 		ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c ft_strdup.c\
@@ -27,14 +27,15 @@ OBJ		= $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-		$(LIB) $(NAME) $(OBJ)
+$(NAME): $(SRC)
+		@$(CC) $(CCFLAGS) $(SRC) -c
+		@$(LIB) $(NAME) $(OBJ)
 
 clean:
 	$(RM) $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(OBJ)
 
 re: clean fclean all
 
