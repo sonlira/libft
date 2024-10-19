@@ -6,13 +6,13 @@
 /*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 20:53:59 by abaldelo          #+#    #+#             */
-/*   Updated: 2024/10/10 18:58:53 by abaldelo         ###   ########.fr       */
+/*   Updated: 2024/10/19 22:34:45 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	size_t	lenght_word(char const *s, char c)
+static	size_t	length_word(char const *s, char c)
 {
 	size_t	size;
 
