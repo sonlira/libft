@@ -32,7 +32,7 @@ static	size_t	count_words(char const *s, char c)
 		if (*s != c)
 		{
 			count++;
-			s += lenght_word(s, c);
+			s += length_word(s, c);
 		}
 		else
 			s++;
@@ -67,10 +67,10 @@ char	**ft_split(char const *s, char c)
 	{
 		if (*s != c)
 		{
-			words[i] = ft_substr(s, 0, lenght_word(s, c));
+			words[i] = ft_substr(s, 0, length_word(s, c));
 			if (!words[i++])
 				return (free_mem(words), NULL);
-			s += lenght_word(s, c);
+			s += length_word(s, c);
 		}
 		else
 			s++;
