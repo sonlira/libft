@@ -6,7 +6,7 @@
 /*   By: abaldelo <abaldelo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 18:56:39 by abaldelo          #+#    #+#             */
-/*   Updated: 2025/01/21 15:11:25 by abaldelo         ###   ########.fr       */
+/*   Updated: 2025/01/21 16:36:40 by abaldelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,5 @@ struct s_list *next;
 } t_list;
 
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 #endif
